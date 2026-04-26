@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Nexora Elite - VU Student Helper",
+  "version": "1.0.2",
+  "description": "The premium all-in-one productivity suite for VU, DigiSkills, and Cisco students. Solve assignments with AI and optimize your LMS experience.",
+  "permissions": ["storage", "contextMenus", "tabs", "printing"],
+  "host_permissions": [
+    "https://*.vu.edu.pk/*", 
+    "https://*.digiskills.pk/*",
+    "https://*.netacad.com/*",
+    "http://localhost:3000/*",
+    "https://hmnexora.tech/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.vu.edu.pk/*",
+        "https://*.digiskills.pk/*",
+        "https://*.netacad.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css", "modern-vulms.css"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
