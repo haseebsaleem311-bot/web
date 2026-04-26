@@ -1,4 +1,4 @@
-// Build trigger: Perfection phase final push
+// Build trigger: OAuth redirect URI fix for hmnexora.tech
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
